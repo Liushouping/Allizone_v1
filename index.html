@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="./css/index.css" rel="stylesheet">
-  <script src="./js/bg-an.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
   <title>Website Title</title>
 	<script>
@@ -66,9 +65,9 @@ class="tracking-onepx cursor-fancy">
 		</div>
 
 		<div 
-		class="absolute w-screen top-44 lg:top-20 z-10 animate-pulse"
+		class="absolute w-screen top-32 lg:top-32 z-10 animate-pulse"
 		>
-			<canvas class="h-[320px] w-full"></canvas>
+			<canvas class="h-[210px] lg:h-[260px] w-full px-14"></canvas>
 		</div>
 
 		<footer 
@@ -82,9 +81,6 @@ class="tracking-onepx cursor-fancy">
 					</li>
 					<li>
 						<img src="./image/twitter.svg" class="w-4 h-4 hover:opacity-70">
-					</li>
-					<li>
-						<img src="./image/facebook.svg" class="w-4 h-4 hover:opacity-70">
 					</li>
 					<li>
 						<img src="./image/instagram.svg" class="w-4 h-4 hover:opacity-70">
@@ -291,7 +287,7 @@ class="tracking-onepx cursor-fancy">
 			  function actions() {
 			    resize();
 			    const c = [];
-			    for (let i = 0; i < 20; i += 1) {
+			    for (let i = 0; i < 10; i += 1) {
 			      c.push(new Curve({h:240, s:100, l:50, a:1}).draw())
 			      c.push(new Curve({h:120, s:100, l:50, a:1}).draw())
 			    }
