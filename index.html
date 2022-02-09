@@ -31,14 +31,6 @@
 	    }
 	 }
 	</script>
-	<script type="text/javascript">
-		$(window).mousemove(function(e) { 	  
-			$(".cursor").css({
-				left: e.pageX,
-				top: e.pageY
-			})	  
-		})
-	</script>
 </head>
 <body 
 class="tracking-onepx cursor-fancy">
@@ -66,7 +58,7 @@ class="tracking-onepx cursor-fancy">
 		</div>
 
 		<div 
-		class="absolute w-screen top-32 lg:top-32 2xl:top-44 z-10 px-6 lg:px-14 opacity-60"
+		class="absolute w-screen top-32 md:top-80 lg:top-32 2xl:top-44 z-10 px-6 lg:px-14 opacity-60"
 		>
 			<canvas class="h-[210px] lg:h-[260px] w-full"></canvas>
 		</div>
@@ -106,9 +98,9 @@ class="tracking-onepx cursor-fancy">
 				<img src="./image/right-img.svg" class="min-w-[16px] w-16 lg:w-12 lg:pb-6">
 			</div>
 		</footer>
+		<div class="hidden md:flex cursor cursor-shadow"></div>
+		<div class="hidden md:flex cursor cursor-dot"></div>
 	</section>
-	<div class="hidden md:flex cursor cursor-shadow"></div>
-	<div class="hidden md:flex cursor cursor-dot"></div>
 </body>
 <script>
 			  const canvas = document.querySelector('canvas');
@@ -209,7 +201,6 @@ class="tracking-onepx cursor-fancy">
 			    }
 			    getColorString() {
 			      return `hsla(${this.color.h}deg,${this.color.s}%,${this.color.l}%,${this.alpha})`;
-			      // return `hsla(${this.hue}deg,${this.color.s}%,${this.color.l}%,${this.alpha})`;
 			    }
 			    updateTranslate() {
 			      this.translate.x += 10 * this.translateRange.rx
@@ -310,5 +301,13 @@ class="tracking-onepx cursor-fancy">
 			  window.addEventListener('resize', () => {
 			    requestAnimationFrame(actions)
 			  }, {passive: true});
+			</script>
+			<script>
+				$(window).mousemove(function(e) { 	  
+					$(".cursor").css({
+						left: e.pageX,
+						top: e.pageY
+					})	  
+				})
 			</script>
 </html>
