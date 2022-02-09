@@ -209,6 +209,7 @@ class="tracking-onepx cursor-fancy">
 			    }
 			    getColorString() {
 			      return `hsla(${this.color.h}deg,${this.color.s}%,${this.color.l}%,${this.alpha})`;
+			      // return `hsla(${this.hue}deg,${this.color.s}%,${this.color.l}%,${this.alpha})`;
 			    }
 			    updateTranslate() {
 			      this.translate.x += 10 * this.translateRange.rx
@@ -278,8 +279,10 @@ class="tracking-onepx cursor-fancy">
 			  function fader() {
 			    var gradient = ctx.createRadialGradient(width / 2,height / 2,0,width / 2,height / 2, Math.max(width / 2, height / 2));
 
-			    gradient.addColorStop(0, `hsla(220deg, 35%, 15%, 0)`);
-			    gradient.addColorStop(1, `hsla(220deg, 35%, 15%, 0)`);
+			    // gradient.addColorStop(0, `hsla(220deg, 35%, 15%, 0)`);
+			    // gradient.addColorStop(1, `hsla(220deg, 35%, 15%, 0)`);
+			    gradient.addColorStop(0, `hsla(220deg, 0%, 0%, 0.2)`);
+    			gradient.addColorStop(1, `hsla(220deg, 0%, 0%, 0.02)`);
 
 			    ctx.fillStyle = gradient;
 			    ctx.fillRect(0,0,width,height);
@@ -288,7 +291,7 @@ class="tracking-onepx cursor-fancy">
 			  function actions() {
 			    resize();
 			    const c = [];
-			    for (let i = 0; i < 10; i += 1) {
+			    for (let i = 0; i < 20; i += 1) {
 			      c.push(new Curve({h:240, s:100, l:50, a:1}).draw())
 			      c.push(new Curve({h:120, s:100, l:50, a:1}).draw())
 			    }
