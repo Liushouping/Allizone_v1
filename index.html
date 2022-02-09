@@ -66,17 +66,17 @@ class="tracking-onepx cursor-fancy">
 		</div>
 
 		<div 
-		class="absolute w-screen top-32 lg:top-32 z-10 animate-pulse"
+		class="absolute w-screen top-32 lg:top-32 2xl:top-44 z-10 animate-pulse"
 		>
 			<canvas class="h-[210px] lg:h-[260px] w-full px-6 lg:px-14"></canvas>
 		</div>
 
 		<footer 
-		class="fixed bottom-5 w-screen flex flex-col md:flex-row justify-between items-end lg:items-center">
+		class="fixed bottom-5 w-screen flex flex-col lg:flex-row justify-between items-end lg:items-center">
 			<div 
-			class="w-1/3 pl-0 lg:pl-10 pr-10 md:pr-0">
+			class="w-1/3 pl-0 lg:pl-10 pr-10 md:pr-24 lg:pr-0">
 				<ul 
-				class="flex flex-row space-x-4 justify-end lg:justify-start items-end lg:items-center py-6 md:py-0">
+				class="flex flex-row space-x-4 justify-end lg:justify-start items-end lg:items-center py-6 lg:py-0">
 					<li>
 						<img src="./image/discord.svg" class="w-4 h-4 hover:opacity-70">
 					</li>
@@ -107,8 +107,8 @@ class="tracking-onepx cursor-fancy">
 			</div>
 		</footer>
 	</section>
-	<div class="cursor cursor-shadow"></div>
-	<div class="cursor cursor-dot"></div>
+	<div class="hidden md:flex cursor cursor-shadow"></div>
+	<div class="hidden md:flex cursor cursor-dot"></div>
 </body>
 <script>
 			  const canvas = document.querySelector('canvas');
@@ -279,8 +279,6 @@ class="tracking-onepx cursor-fancy">
 			  function fader() {
 			    var gradient = ctx.createRadialGradient(width / 2,height / 2,0,width / 2,height / 2, Math.max(width / 2, height / 2));
 
-			    // gradient.addColorStop(0, `hsla(220deg, 35%, 15%, 0)`);
-			    // gradient.addColorStop(1, `hsla(220deg, 35%, 15%, 0)`);
 			    gradient.addColorStop(0, `hsla(220deg, 0%, 0%, 0.2)`);
     			gradient.addColorStop(1, `hsla(220deg, 0%, 0%, 0.02)`);
 
